@@ -1,0 +1,242 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html{
+    overflow-y: scroll;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #3f51b5;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #C5CAE9;
+}
+.navholder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 185px;
+}
+.logoHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 70px;
+    width: fit-content;
+}
+.logo{
+    height: 40px;
+}
+.logoCaption{
+    color: white;
+    font-size: 25px;
+    
+    font-weight: 900;
+    margin-left: 10px;
+}
+.navlinks, li{
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.links{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    font-size: 17px;
+    border-radius: 7px;
+    margin-left: 7px;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3F51B5;
+    height: 280px;
+    width: 100%;
+}
+.heroContainer{
+    width: 100%;
+    height: 140px;
+}
+.firstHero{
+    text-align: center;
+    font-family: poppins, sans-serif;
+    color: white;
+    font-size: 70px;
+    font-weight: bolder;
+    width: fit-content;
+    margin: 0 auto;
+}
+.secondHero{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    width: fit-content;
+    margin: auto;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 250px;
+    width: 100%;
+}
+.forOption{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 25px;
+    width: 100%;
+    height: fit-content;
+}
+.employers{
+    height: 160px;
+    width: 745px;
+    background-color: #C5CAE9;
+    border-radius: 10px;
+    padding: 20px;
+    line-height: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.devEmp{
+    font-size: 30px;
+    font-weight: 700;
+}
+.devCaption{
+    font-size: 16px;
+}
+.browse{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.add{
+    background-color: #303F9F;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.jobsSection{
+    background-color: #eff6ff;
+    height: 460px;
+    width: 100%;
+}
+.jobHead{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 80px;
+}
+.headTitle{
+    color: #303F9F;
+    font-size: 35px;
+    font-weight: 800;
+}
+.jobBodies{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    height: calc(460px - 80px);
+}
+.jobs{
+    background-color: white;
+    height: 310px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 25px 20px;
+}
+.jobType{
+    font-size: 17px;
+    font-weight: 100;
+    color: rgb(100 100 100);
+}
+.jobWant{
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.details{
+    font-size: 17px;
+    margin-top: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.jobPay{
+    color: #3F51B5;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.hr{
+    border: 1px solid rgb(243 243 243);
+    margin-top: 10px;
+}
+.locationHolder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+.locationDetails{
+    display: flex;
+    align-items: center;
+}
+.locationLogo{
+    height: 25px;
+}
+.location{
+    font-size: 18px;
+    color: orange;
+}
+.readMore{
+    background-color: #3F51B5;
+    color: white;
+    padding: 15px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303F9F;
+    height: 140px;
+    width: 100%;
+}
+.footerBtn{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    height: 60px;
+    width: 450px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
