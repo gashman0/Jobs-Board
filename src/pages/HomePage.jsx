@@ -13,7 +13,7 @@ const HomePage = () => {
         <>
             <Hero />
             <Section />
-            <JobSection />
+            <JobSection isHome = {true} />
             <Footer />
         </>
     )

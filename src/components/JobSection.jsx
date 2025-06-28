@@ -1,25 +1,44 @@
 import React from 'react';
-import jobs from '../jobs.json';
+import { useState, useEffect } from 'react';
 import Job from './Job';
+import Spinner from './Spinner';
 
 
+const JobSection = ({ isHome = false }) => {
+    const [jobs, setJobs] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-const JobSection = () => {
-    const recentJobs = jobs.slice(0, 3);
+    useEffect(() => {
+        const fetchJobs = async() => {
+            const apiUrl = isHome ? 'http://localhost:3000/jobs?_limit=3' : 'http://localhost:3000/jobs' ;
+            try {
+                const res =  await fetch( apiUrl );
+                const data = await res.json();
+                setJobs(data);
+            } catch (error) {
+                console.log('Error due to parallex', error);
+            }finally{
+                setLoading(false);
+            }
+        }
+
+        fetchJobs();
+    }, []);
 
     return (
         <div className="jobsSection">
             <div className="jobHead">
-                <p className="headTitle">Browse Jobs</p>
+                <p className="headTitle">{isHome ? 'Recent Jobs' : 'Browse Jobs'}</p>
             </div>
             <div className="jobBodies">
-
-                {
-                    recentJobs.map((job) => (
+                {loading ? (<Spinner loading={loading} />) : (
+                    <>
+                        {jobs.map((job) => (
                         <Job key={job.id} job={ job }/>
-                    ))
-                }
-
+                            ))
+                        }  
+                    </>
+                )}
     
             </div>
         </div>
