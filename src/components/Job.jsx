@@ -1,6 +1,7 @@
 import React from 'react';
 import locationLogo from '../assets/images/location.png';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,7 +29,7 @@ const Job = ( {job} ) => {
                     <img src={ locationLogo } alt="" className="locationLogo" />
                     <p className="location">{ job.location }</p>
                 </div>
-                <a href={`/job/${job.id}`} className="readMore">Read More</a>
+                <Link to={`/job/${job.id}`} className="readMore">Read More</Link>
             </div>
         </div>
     )

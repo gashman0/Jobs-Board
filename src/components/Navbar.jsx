@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
 const style = {backgroundColor: "black"};
+const nostyle = {backgroundColor: ""};
+const activeLink = ({isActive}) => isActive ? style : nostyle ;
 const Navbar = () => {
   return (
     <div className="navbar">
@@ -14,9 +16,9 @@ const Navbar = () => {
             <p className="logoCaption">React Jobs</p>
           </div>
           <ul className="navLinks">
-            <li><Link className="links" to='/' style={ style }>Home</Link></li>
-            <li><Link className="links" to='/jobs'>Jobs</Link></li>
-            <li><Link className="links" to='/add-job'>Add Job</Link></li>
+            <li><NavLink className="links" to='/' style={ activeLink }>Home</NavLink></li>
+            <li><NavLink className="links" to='/jobs' style={ activeLink}>Jobs</NavLink></li>
+            <li><NavLink className="links" to='/add-job' style={ activeLink }>Add Job</NavLink></li>
           </ul>
         </div>
       </div>

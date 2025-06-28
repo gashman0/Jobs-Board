@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Form from '../components/Form';
 
 const AddJob = () => {
   return (
-    <div>AddJob</div>
+    <>
+      <Form />
+
+      <div class="footer">I'm a just footer</div>
+    </>
   )
 }
 

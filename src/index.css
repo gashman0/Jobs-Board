@@ -59,6 +59,12 @@ body{
     border-radius: 7px;
     margin-left: 7px;
 }
+.links:hover{
+    background-color: rgb(50 50 50);
+}
+.links:active{
+    background-color: black;
+}
 .hero{
     display: flex;
     justify-content: center;
@@ -118,25 +124,28 @@ section{
 }
 .devCaption{
     font-size: 16px;
+    margin-bottom: 15px;
 }
 .browse{
+    text-align: center;
+    text-decoration: none;
     background-color: black;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
     font-size: 17px;
-    margin-top: 15px;
     cursor: pointer;
 }
 .add{
+    text-align: center;
+    text-decoration: none;
     background-color: #303F9F;
     color: white;
     border: none;
     padding: 10px;
     border-radius: 5px;
     font-size: 17px;
-    margin-top: 15px;
     cursor: pointer;
 }
 .jobsSection{
@@ -161,6 +170,7 @@ section{
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 20px;
+    background-color: #eff6ff;
 }
 .jobs{
     background-color: white;
@@ -254,4 +264,116 @@ section{
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
+}
+
+
+
+
+
+
+
+.search{
+    width: 100%;
+    padding: 20px 40px 0 40px;
+    background-color: #eff6ff;
+}
+input{
+    /* margin: 20px 20px; */
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid rgb(200 200 200);
+    font-size: 17px;
+    padding: 0 20px;
+}
+input:focus{
+    border: 1px solid blue;
+    outline: blue;
+}
+.jobHead{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 80px;
+    background-color: #eff6ff;
+}
+.headTitle{
+    color: #303F9F;
+    font-size: 35px;
+    font-weight: 800;
+}
+.jobBodies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    gap: 60px 0;
+    padding: 20px 0;
+}
+
+
+
+
+
+
+
+form{
+    width: 42%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    height: 1300px;
+    padding: 30px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    line-height: 40px;
+    overflow: hidden;
+}
+.addJob{
+    font-size: 31px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.labelCap{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(80, 80, 80);
+}
+select{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 17px;
+    padding-left: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    margin-bottom: 10px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(200, 200, 200);
+    font-size: 17px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+textarea{
+    width: 100%;
+    font-size: 17px;
+    height: 130px;
+    padding-left: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+}
+.formBtn{
+    padding: 10px;
+    background-color: #3f51b5;
+    border: none;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
 }
