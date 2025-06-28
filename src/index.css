@@ -171,6 +171,10 @@ section{
     padding: 25px 20px;
     overflow: hidden;
 }
+.jobDetails{
+    overflow: hidden;
+    height: 230px;
+}
 .jobType{
     font-size: 17px;
     font-weight: 100;
@@ -187,10 +191,16 @@ section{
     margin-top: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.showMore{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(100 100 100);
+}
 .jobPay{
     color: #3F51B5;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .hr{
     border: 1px solid rgb(243 243 243);

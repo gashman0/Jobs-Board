@@ -1,5 +1,6 @@
-import React from 'react'
-import logo from '../assets/images/logo.png'
+import React from 'react';
+import logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,9 +14,9 @@ const Navbar = () => {
             <p className="logoCaption">React Jobs</p>
           </div>
           <ul className="navLinks">
-            <li><a className="links" href="" style={ style }>Home</a></li>
-            <li><a className="links" href="jobs.html">Jobs</a></li>
-            <li><a className="links" href="addjobs.html">Add Job</a></li>
+            <li><Link className="links" to='/' style={ style }>Home</Link></li>
+            <li><Link className="links" to='/jobs'>Jobs</Link></li>
+            <li><Link className="links" to='/add-job'>Add Job</Link></li>
           </ul>
         </div>
       </div>
