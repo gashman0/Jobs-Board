@@ -29,7 +29,7 @@ const Job = ( {job} ) => {
                     <img src={ locationLogo } alt="" className="locationLogo" />
                     <p className="location">{ job.location }</p>
                 </div>
-                <Link to={`/job/${job.id}`} className="readMore">Read More</Link>
+                <Link to={`/jobs/${job.id}`} className="readMore">Read More</Link>
             </div>
         </div>
     )

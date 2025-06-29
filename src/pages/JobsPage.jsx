@@ -6,7 +6,7 @@ const JobsPage = () => {
     <>
       <div className='jobSection'>
         <div className="search">
-          <input type="search" class="searchEng" placeholder="Filter jobs..." />
+          <input type="search" className="searchEng" placeholder="Filter jobs..." />
         </div>
       <div className="jobBodies">
         <JobSection />

@@ -358,6 +358,10 @@ input{
     padding-left: 10px;
     margin-bottom: 10px;
 }
+.companyInfoo{
+    font-size: 30px;
+    margin-top: 15px;
+}
 textarea{
     width: 100%;
     font-size: 17px;
@@ -376,4 +380,176 @@ textarea{
     font-weight: bold;
     color: white;
     border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.jobBodiess{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    background-color: #eff6ff;
+    height: 750px;
+    width: 100%;
+}
+.div1{
+    height: 700px;
+    width: 1050px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.needed{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: inherit;
+    padding: 25px 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.jobTypee{
+    color: rgb(100, 100, 100);
+}
+.workerNeeded{
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 10px;
+}
+.locationDetails{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.locationLogo{
+    height: 25px;
+}
+.workLocation{
+    color: orange;
+    font-size: 20px;
+}
+.descriptionBox{
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    border-radius: inherit;
+    margin-bottom: 28px;
+    padding: 25px 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.jobDescription{
+    color: darkblue;
+    font-weight: 700;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.descriptionDetails{
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+}
+.salary{
+    color: darkblue;
+    font-weight: 700;
+    font-size: 25px;
+    margin-top: 25px;
+}
+.salaryAmount{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.apply{
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+    border: none;
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    font-size: larger;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.div2{
+    height: 701px;
+    width: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.aboutCompany{
+    height: fit-content;
+    border-radius: inherit;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.companyInfo{
+    font-size: 35px;
+    font-weight: 600;
+}
+.companyName{
+    margin-top: 30px;
+    font-size: 30px;
+}
+.companyDetails{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 18px;
+}
+.line{
+    margin-top: 20px;
+}
+.contact{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.contactLine{
+    display: inline-block;
+    background-color: rgb(230, 230, 230);
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+.manage{
+    height: fit-content;
+    padding: 20px;
+    border-radius: inherit;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+.manageJob{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.eButton{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.footerr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303F9F;
+    color: white;
+    height: 140px;
+    width: 100%;
 }
