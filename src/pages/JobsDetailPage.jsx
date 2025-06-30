@@ -1,13 +1,24 @@
 import React from 'react';
-import { useParams, useLoaderData, Link } from 'react-router-dom';
+import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import location from '../assets/images/location.png';
+import { toast } from 'react-toastify';
 
 
 
+const JobsDetailPage = ({deleteJob}) => {
 
-const JobsDetailPage = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
     const job = useLoaderData();
+
+
+    const onDeleteClick = (jobId) => {
+        const confirm = window.confirm('Are you sure you want to delete this job ?');
+        if(!confirm) return;
+        deleteJob(jobId);
+        toast.success('Job Deleted Successfully');
+        navigate("/jobs");
+    }
 
     const black ={backgroundColor: 'blue'};
     const red = {backgroundColor: 'red'};
@@ -53,8 +64,8 @@ const JobsDetailPage = () => {
 
                 <div className="manage">
                     <p className="manageJob">Manage Job</p>
-                    <Link to={`/jobs/edit/${job.id}`} className="eButton" style={ black }>Edit Job</Link>
-                    <Link to={`/jobs/delete/${job.id}`} className="eButton" style={ red }>Delete Job</Link>
+                    <Link to={`/edit-job/${job.id}`} className="eButton" style={ black }>Edit Job</Link>
+                    <button onClick={() => onDeleteClick(job.id)} className="eButton" style={ red }>Delete Job</button>
                 </div>
             </div>
                
