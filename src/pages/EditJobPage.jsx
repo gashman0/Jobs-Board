@@ -53,10 +53,6 @@ const EditJobPage = ({updateJobSubmit}) => {
     }
 
 
-
-
-
-
   return (
     <div className="jobBodies">
       <form onSubmit={submitForm}>

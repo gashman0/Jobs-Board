@@ -171,6 +171,7 @@ section{
     align-items: center;
     padding-bottom: 20px;
     background-color: #eff6ff;
+    height: 100%;
 }
 .jobs{
     background-color: white;
@@ -323,7 +324,7 @@ form{
     margin: auto;
     background-color: white;
     border-radius: 5px;
-    height: 1300px;
+    height: 100%;
     padding: 30px;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
     line-height: 40px;
@@ -552,4 +553,10 @@ textarea{
     color: white;
     height: 140px;
     width: 100%;
+}
+.Toastify {
+    position: fixed !important;
+    /* bottom: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important; */
 }

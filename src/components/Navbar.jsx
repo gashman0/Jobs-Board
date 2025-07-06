@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="navholder">
           <div className="logoHolder">
             <img className="logo" src={ logo } />
-            <p className="logoCaption">React Jobs</p>
+            <p className="logoCaption">Jobs Board</p>
           </div>
           <ul className="navLinks">
             <li><NavLink className="links" to='/' style={ activeLink }>Home</NavLink></li>
