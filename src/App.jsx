@@ -8,57 +8,92 @@ import JobsDetailPage, { jobLoader } from './pages/JobsDetailPage';
 import NotFound from './pages/NotFound';
 import EditJobPage from './pages/EditJobPage';
 
-
-
 const App = () => {
-    // Add new job
-    const addJob = async ( newJob ) => { 
-        const res = await fetch('/api/jobs', {
-            method: 'POST', 
-            header: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newJob),
+  // Replace with your actual MockAPI URL
+  const MOCKAPI_URL = "https://686bc6ba14219674dcc60efc.mockapi.io/jobs";
 
-        });
-        return;
+  // Flatten job data before sending to MockAPI
+  const flattenJob = (job) => {
+    return {
+      ...job,
+      companyName: job.company?.name || "",
+      companyDescription: job.company?.description || "",
+      companyEmail: job.company?.email || job.company?.contactEmail || "",
+      companyPhone: job.company?.phone || job.company?.contactPhone || ""
     };
+  };
 
+  // Reconstruct nested company object when receiving data
+  const reconstructJob = (job) => {
+    return {
+      ...job,
+      company: {
+        name: job.companyName,
+        description: job.companyDescription,
+        email: job.companyEmail,
+        phone: job.companyPhone
+      }
+    };
+  };
 
+  // Add new job
+  const addJob = async (newJob) => {
+    const flattenedJob = flattenJob(newJob);
+    await fetch(MOCKAPI_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(flattenedJob),
+    });
+  };
 
-    // Delete job
-    const deleteJob = async (id) => {
-        const res = await fetch(`/api/jobs/${id}`, {
-            method: 'DELETE', 
-        });
-        return;
-    } 
+  // Delete job
+  const deleteJob = async (id) => {
+    await fetch(`${MOCKAPI_URL}/${id}`, {
+      method: 'DELETE',
+    });
+  };
 
-    // Update job
-    const updateJob = async (job) => {
-         const res = await fetch(`/api/jobs/${job.id}`, {
-            method: 'PUT', 
-            header: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(job),
+  // Update job
+  const updateJob = async (job) => {
+    const flattenedJob = flattenJob(job);
+    await fetch(`${MOCKAPI_URL}/${job.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(flattenedJob),
+    });
+  };
 
-        });
-        return;
-    } 
+  // Updated jobLoader for MockAPI
+  const mockApiJobLoader = async ({ params }) => {
+    const response = await fetch(`${MOCKAPI_URL}/${params.id}`);
+    const job = await response.json();
+    return reconstructJob(job);
+  };
 
-    const router = createBrowserRouter(
-        createRoutesFromElements(
-            <Route path='/' element={<MainLayout />}>
-                <Route index element={<HomePage />} />
-                <Route path='/jobs' element={<JobsPage />} />
-                <Route path='/add-job' element={<AddJob addJobSubmit={addJob}/>} />
-                <Route path='/jobs/:id' element={<JobsDetailPage deleteJob={deleteJob} />} loader={ jobLoader }/>
-                <Route path='/edit-job/:id' element={<EditJobPage updateJobSubmit={updateJob} />} loader={ jobLoader }/>
-                <Route path='*' element={<NotFound />} />
-            </Route>
-        )
-    );
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path='/jobs' element={<JobsPage />} />
+        <Route path='/add-job' element={<AddJob addJobSubmit={addJob} />} />
+        <Route 
+          path='/jobs/:id' 
+          element={<JobsDetailPage deleteJob={deleteJob} />} 
+          loader={mockApiJobLoader}
+        />
+        <Route 
+          path='/edit-job/:id' 
+          element={<EditJobPage updateJobSubmit={updateJob} />} 
+          loader={mockApiJobLoader}
+        />
+        <Route path='*' element={<NotFound />} />
+      </Route>
+    )
+  );
 
   return <RouterProvider router={router} />;
 };
