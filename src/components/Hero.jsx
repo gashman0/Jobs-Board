@@ -8,8 +8,10 @@ const Hero = ({title="Become a Paid Employee", subTitle="Find the perfect job th
   return (
     <div className="hero">
           <div className="heroContainer">
-              <p className="firstHero">{ title }</p>
-              <p className="secondHero">{ subTitle }</p>
+              <div>
+                <p className="firstHero">{ title }</p>
+                <p className="secondHero">{ subTitle }</p>
+              </div>
           </div>
     </div>
   )
