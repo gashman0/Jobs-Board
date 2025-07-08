@@ -200,7 +200,7 @@ section{
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
-    section{min-height: fit-content;}
+    section{min-height: 500px}
     .forOption{flex-direction: column; display: flex;justify-content: center;}
     section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
     section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 17px 0;}
