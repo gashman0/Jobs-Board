@@ -204,8 +204,9 @@ section{
     .forOption{flex-direction: column; display: flex;justify-content: center;}
     section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
     section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
+    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
     .jobs{max-width: 90%;}
-    .details{overflow: hidden;height: 120px;margin-top: 10px !important;}
+    .details{overflow: hidden;height: 110px;margin-top: 10px !important;}
     .locationHolder{max-height: 80px;}
     .footerBtn{max-width: 200px;}
 }
