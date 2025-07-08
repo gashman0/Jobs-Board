@@ -204,21 +204,10 @@ section{
     section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
     section > .forOption > div > .employers{width: 450px;}
     section > .forOption > div > .last{margin-top: 33px;}
-    .jobs{
-        max-width: 450px;
-    }
-    .jobDetails{
-        border: 2px solid green;
-    }
-    .jobWant{
-        border: 2px solid pink;
-    }
-    .details{
-        border: 2px solid red;
-        overflow: hidden;
-        height: 90px;
-        margin-top: 0;
-    }
+    .jobs{max-width: 450px;}
+    .details{overflow: hidden;height: 120px;margin-top: 10px !important;}
+    .locationHolder{max-height: 80px;}
+    .footerBtn{max-width: 200px;}
 }
 .jobs{
     background-color: white;
@@ -228,7 +217,6 @@ section{
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     padding: 25px 20px;
     overflow: hidden;
-    border: 2px solid black;
 }
 .jobDetails{
     overflow: hidden;
@@ -267,13 +255,14 @@ section{
 }
 .locationHolder{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 90px;
+    justify-content: space-between;
+    height: 80px;
 }
 .locationDetails{
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
 }
 .locationLogo{
     height: 25px;
