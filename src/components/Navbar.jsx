@@ -21,7 +21,7 @@ const Navbar = () => {
             <li><NavLink className="links" to='/add-job' style={ activeLink }>Add Job</NavLink></li>
           </ul>
           <div className='menu'>
-            <button>Menu</button>
+            <button className='menuBtn'>Menu</button>
           </div>
         </div>
       </div>
