@@ -196,13 +196,13 @@ section{
     .navholder{display: flex;justify-content: space;width: 100%;}
     .logoHolder{width: fit-content;}
     .menu{display: block;}
-    .heroContainer{height: 100px;overflow: hidden;}
+    .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
     section{min-height: 420px;}
     .forOption{flex-direction: column; display: flex;justify-content: center;}
     section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
-    section > .forOption > div > .employers{width: 450px;}
+    section > .forOption > div > .employers{width: 100%;}
     section > .forOption > div > .last{margin-top: 33px;}
     .jobs{max-width: 450px;}
     .details{overflow: hidden;height: 120px;margin-top: 10px !important;}
