@@ -72,21 +72,6 @@ body{
 .menu{
     display: none;
 }
-@media (max-width: 768px){
-    .navbar{display: flex;padding: 0 15px;}
-    .navLinks{display: none;}
-    .navholder{display: flex;justify-content: space;width: 100%;}
-    .logoHolder{width: fit-content;}
-    .menu{display: block;}
-    .heroContainer{height: 100px;overflow: hidden;}
-    .heroContainer > div > .firstHero{font-size: 45px;}
-    .heroContainer > div > .secondHero{font-size: 15px;}
-    section{border: 2px solid red; overflow: hidden; min-height: 420px;}
-    .forOption{flex-direction: column;}
-    section > .forOption > .employers{
-        width: 500px;
-    }
-}
 .hero{
     display: flex;
     justify-content: center;
@@ -134,12 +119,19 @@ section{
     width: 100%;
     height: fit-content;
 }
+.forOption > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
 .employers{
     height: 160px;
     width: 745px;
     background-color: #C5CAE9;
     border-radius: 10px;
     padding: 20px;
+    margin: 0px;
     line-height: 32px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
 }
@@ -198,6 +190,36 @@ section{
     background-color: #eff6ff;
     height: 100%;
 }
+@media (max-width: 768px){
+    .navbar{display: flex;padding: 0 15px;}
+    .navLinks{display: none;}
+    .navholder{display: flex;justify-content: space;width: 100%;}
+    .logoHolder{width: fit-content;}
+    .menu{display: block;}
+    .heroContainer{height: 100px;overflow: hidden;}
+    .heroContainer > div > .firstHero{font-size: 45px;}
+    .heroContainer > div > .secondHero{font-size: 15px;}
+    section{min-height: 420px;}
+    .forOption{flex-direction: column; display: flex;justify-content: center;}
+    section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
+    section > .forOption > div > .employers{width: 450px;}
+    section > .forOption > div > .last{margin-top: 33px;}
+    .jobs{
+        max-width: 450px;
+    }
+    .jobDetails{
+        border: 2px solid green;
+    }
+    .jobWant{
+        border: 2px solid pink;
+    }
+    .details{
+        border: 2px solid red;
+        overflow: hidden;
+        height: 90px;
+        margin-top: 0;
+    }
+}
 .jobs{
     background-color: white;
     height: 350px;
@@ -206,6 +228,7 @@ section{
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     padding: 25px 20px;
     overflow: hidden;
+    border: 2px solid black;
 }
 .jobDetails{
     overflow: hidden;
