@@ -436,6 +436,13 @@ textarea{
     cursor: pointer;
 }
 @media (max-width: 768px){
+    *{box-sizing: border-box;margin: 0;
+    padding: 0;}
+    html, body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
     .navbar{display: flex;padding: 0 15px; max-width: 100%;}
     .navLinks{display: none;}
     .navholder{display: flex;justify-content: space;width: 100%;}
@@ -467,6 +474,7 @@ textarea{
         min-height: fit-content;
         margin-bottom: 20px;
     }
+    
     .footerr{max-width: 100%;}
 }
 .div1{
