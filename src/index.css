@@ -455,7 +455,7 @@ textarea{
     .heroContainer > div > .secondHero{font-size: 15px;}
     section{min-height: 450px;}
     .forOption{flex-direction: column; display: flex;justify-content: center;height: 400px; overflow: hidden; align-items: center;}
-    section > .forOption > div{border: 2px solid black; width: fit-content; height: 355px; display: block;height: fit-content;}
+    section > .forOption > div{width: fit-content; height: 355px; display: block;height: fit-content;}
     section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
     section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
     .jobs{max-width: 90%;margin-bottom: 20px;}
