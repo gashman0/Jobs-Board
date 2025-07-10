@@ -4,8 +4,9 @@ import logo from '../assets/images/logo.png';
 import { NavLink } from 'react-router-dom';
 
 
-const style = {backgroundColor: "black"};
-const nostyle = {backgroundColor: ""};
+const offcan = {color: "#3f51b5"};
+const style = {backgroundColor: "#3f51b5",color: "white"};
+const nostyle = {backgroundColor: "",};
 const activeLink = ({isActive}) => isActive ? style : nostyle ;
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -40,7 +41,7 @@ const Navbar = () => {
       <div className={`offcanvas ${isMenuOpen ? 'open' : ''}`}>
         <div className="offcanvas-header">
           <img className="logo" src={logo} alt="Jobs Board Logo" />
-          <p className="logoCaption">Jobs Board</p>
+          <p className="logoCaption" style={ offcan }>Jobs Board</p>
         </div>
         <ul className="mobile-navLinks">
           <li><NavLink className="links" to='/' style={activeLink} onClick={toggleMenu}>Home</NavLink></li>

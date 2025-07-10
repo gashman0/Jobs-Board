@@ -73,7 +73,6 @@ body{
 
 /* Off-Canvas Menu */
 .offcanvas {
-
   position: fixed;
   top: 0;
   left: -100%;
@@ -453,8 +452,8 @@ textarea{
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
-    section{min-height: 450px;border: 5px solid green;}
-    .forOption{flex-direction: column; display: flex;justify-content: center;border: 2px solid red;}
+    section{min-height: 450px;}
+    .forOption{flex-direction: column; display: flex;justify-content: center;border: 2px solid red; height: 380px; overflow: hidden;}
     section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
     section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
     section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
