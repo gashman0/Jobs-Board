@@ -371,31 +371,7 @@ input:focus{
     font-size: 35px;
     font-weight: 800;
 }
-@media (max-width: 768px){
-    .navbar{display: flex;padding: 0 15px;}
-    .navLinks{display: none;}
-    .navholder{display: flex;justify-content: space;width: 100%;}
-    .logoHolder{width: fit-content;}
-    .menu{display: block;}
-    .menuBtn{padding: 10px 15px; border: none; border-radius: 5px;cursor: pointer;}
-    .hero{height: 250px;}
-    .heroContainer{height: 100px;}
-    .heroContainer > div > .firstHero{font-size: 45px;}
-    .heroContainer > div > .secondHero{font-size: 15px;}
-    section{min-height: 500px}
-    .forOption{flex-direction: column; display: flex;justify-content: center;}
-    section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
-    section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
-    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
-    .jobs{max-width: 90%;}
-    .details{overflow: hidden;height: 110px;margin-top: 10px !important;}
-    .locationHolder{max-height: 80px;}
-    .footerBtn{max-width: 200px;}
-    form{max-width: 100%;}
-}
-
 form{
-    border: 2px solid red;
     width: 42%;
     margin: 30px 0;
     background-color: white;
@@ -459,7 +435,39 @@ textarea{
     border-radius: 20px;
     cursor: pointer;
 }
-
+@media (max-width: 768px){
+    .navbar{display: flex;padding: 0 15px;}
+    .navLinks{display: none;}
+    .navholder{display: flex;justify-content: space;width: 100%;}
+    .logoHolder{width: fit-content;}
+    .menu{display: block;}
+    .menuBtn{padding: 10px 15px; border: none; border-radius: 5px;cursor: pointer;}
+    .hero{height: 250px;}
+    .heroContainer{height: 100px;}
+    .heroContainer > div > .firstHero{font-size: 45px;}
+    .heroContainer > div > .secondHero{font-size: 15px;}
+    section{min-height: 500px}
+    .forOption{flex-direction: column; display: flex;justify-content: center;}
+    section > .forOption > div{width: fit-content;align-self: center; height: 355px;align-content: space-between; display: block;}
+    section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
+    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
+    .jobs{max-width: 90%;}
+    .details{overflow: hidden;height: 110px;margin-top: 10px !important;}
+    .locationHolder{max-height: 80px;}
+    .footerBtn{max-width: 200px;}
+    form{min-width: 90%;}
+    .div1{
+        max-width: 100%;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    .div2{
+        min-width: 100%;
+        padding: 20px;
+        min-height: fit-content;
+        margin-bottom: 20px;
+    }
+}
 .div1{
     height: 700px;
     width: 1050px;
