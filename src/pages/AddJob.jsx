@@ -73,7 +73,7 @@ const AddJob = ({addJobSubmit}) => {
         <input type="text" name='location' id='location' placeholder="Company Location" value={location} onChange={(e) => setLocation(e.target.value)}/><br />
 
         <label htmlFor="" className="labelCap">Job Type</label><br />
-        <select name="type" id="type" value={type} onChange={(e) => setType}>
+        <select name="type" id="type" value={type} onChange={(e) => setType(e.target.value)}>
             <option value="Full-Time">Full-Time</option>
             <option value="Part-Time">Part-Time</option>
             <option value="Remote">Remote</option>
