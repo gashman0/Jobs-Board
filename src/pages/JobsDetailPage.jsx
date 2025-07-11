@@ -20,6 +20,26 @@ const JobsDetailPage = ({deleteJob}) => {
         navigate("/jobs");
     }
 
+
+
+    const handleApply = () => {
+        
+        if (window.confirm('Are you sure you want to apply for this position?')) {
+            // 1. Show success toast
+            toast.success(`Application submitted to ${job.company.name} successfully!`, {
+            position: "top-right",
+            autoClose: 3000,
+            });
+            
+            // 2. Redirect to homepage after a slight delay
+            setTimeout(() => {
+            navigate('/');
+            }, 2000); // 1 second delay to let user see the toast
+        }
+        
+        
+    };
+
     const black ={backgroundColor: 'blue'};
     const red = {backgroundColor: 'red'};
   return (
@@ -43,7 +63,7 @@ const JobsDetailPage = ({deleteJob}) => {
                     <p className="salary">Salary</p>
                     <p className="salaryAmount">{job.salary}/ Year</p>
                 </div>
-                <button className="apply">Apply</button>
+                <button className="apply" onClick={handleApply}>Apply</button>
 
             </div>
 

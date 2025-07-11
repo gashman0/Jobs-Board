@@ -425,13 +425,8 @@ textarea{
     cursor: pointer;
 }
 @media (max-width: 768px){
-    *{box-sizing: border-box;margin: 0;
-    padding: 0;}
-    html, body{
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
+    *{box-sizing: border-box;margin: 0;padding:0;}
+    html, body{max-width: 100%;overflow-x: hidden;}
     .navbar{display: flex;padding: 0 15px; max-width: 100%;}
     .navLinks{display: none;}
     .navholder{display: flex;justify-content: space;width: 100%;}
@@ -448,24 +443,25 @@ textarea{
     section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
     section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
     .jobs{max-width: 90%;margin-bottom: 20px;}
-    .details{overflow: hidden;height: 110px;margin-top: 10px !important;}
+    .details{overflow: hidden;height: 110px;margin-top: 10px}
     .locationHolder{max-height: 80px;}
     .footerBtn{max-width: 200px;}
     form{min-width: 90%;}
     .div1{
-        max-width: 100%;
+        min-width: 100%;
         max-height: fit-content;
         padding: 20px;
-        margin: 20px 0;
+        margin: 20px 0 !important;
     }
     .div2{
-        max-width: 100%;
+        min-width: 100%;
         max-height: fit-content;
         padding: 20px;
         margin-bottom: 20px;
     }
     
     .footerr{max-width: 100%;}
+    .jobBodies{height: auto}
 }
 .jobBodies{
     display: flex;
