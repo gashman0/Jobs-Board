@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const offcan = {color: "#3f51b5"};
-const style = {backgroundColor: "#3f51b5",color: "white"};
+const style = {backgroundColor: "black",color: "white"};
 const nostyle = {backgroundColor: "",};
 const activeLink = ({isActive}) => isActive ? style : nostyle ;
 const Navbar = () => {

@@ -13,8 +13,8 @@ const AddJob = ({addJobSubmit}) => {
   const [salary, setSalary] = useState('Under $50k');
   const [companyName, setCompanyName] = useState('');
   const [companyDescription, setCompanyDescription] = useState('');
-  const [contactEmail, setContactEmail] = useState('');
-  const [contactPhone, setContactPhne] = useState('');
+  const [companyEmail, setCompanyEmail] = useState('');
+  const [companyPhone, setCompanyPhone] = useState('');
 
 
   const navigate = useNavigate();
@@ -28,12 +28,10 @@ const AddJob = ({addJobSubmit}) => {
       location,
       description,
       salary,
-      company: {
-        name: companyName,
-        description: companyDescription,
-        email: contactEmail,
-        phone: contactPhone
-      }
+      companyName,
+      companyDescription,
+      companyEmail,
+      companyPhone
     };
 
     addJobSubmit(newJob);
@@ -90,11 +88,11 @@ const AddJob = ({addJobSubmit}) => {
         <label htmlFor="" className='labelCap'>Company Description</label><br />
         <textarea name="companyDescription" id="companyDescription" placeholder="What does your company do?"value={companyDescription} onChange={(e) => setCompanyDescription(e.target.value)}></textarea><br />
 
-        <label htmlFor="" className="labelCap">Contact Email</label><br />
-        <input type="text" name='contactEmail' id='contactEmail' placeholder="Email address for applicants" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)}/><br />
+        <label htmlFor="companyEmail" className="labelCap">Contact Email</label><br />
+        <input type="text" name='contactEmail' id='companyEmail' placeholder="Email address for applicants" value={companyEmail} onChange={(e) => setCompanyEmail(e.target.value)}/><br />
 
-        <label htmlFor="" className="labelCap">Contact Phone</label><br />
-        <input type="text" name='contactPhone' id='contactPhone' placeholder="Optional phone for applicants" value={contactPhone} onChange={(e) => setContactPhne(e.target.value)}/><br />
+        <label htmlFor="companyPhone" className="labelCap">Contact Phone</label><br />
+        <input type="text" name='contactPhone' id='companyPhone' placeholder="Optional phone for applicants" value={companyPhone} onChange={(e) => setCompanyPhone(e.target.value)}/><br />
 
         <button type="submit" className="formBtn">Add Job</button>
       </form>

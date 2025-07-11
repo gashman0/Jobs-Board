@@ -24,7 +24,7 @@ const JobsDetailPage = ({deleteJob}) => {
     const red = {backgroundColor: 'red'};
   return (
     <>  
-        <div className="jobBodiess">
+        <div className="jobBodies">
             
             <div className="div1">
 
@@ -52,13 +52,13 @@ const JobsDetailPage = ({deleteJob}) => {
 
                 <div className="aboutCompany">
                     <p className="companyInfo">Company Info</p>
-                    <p className="companyName">{job.company.name}</p>
-                    <p className="companyDetails">{job.company.description}</p>
+                    <p className="companyName">{job.companyName}</p>
+                    <p className="companyDetails">{job.companyDescription}</p>
                     <hr className="line" />
                     <p className="contact">Contact Email:</p>
-                    <a href="mailto:" className="contactLine">{job.company.contactEmail}</a>
+                    <a href="mailto:" className="contactLine">{job.companyEmail}</a>
                     <p className="contact">Contact Phone:</p>
-                    <a href="tel:+" className="contactLine">{job.company.contactPhone}</a>
+                    <a href="tel:+" className="contactLine">{job.companyPhone}</a>
                 </div>
 
 

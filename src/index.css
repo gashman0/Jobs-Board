@@ -234,17 +234,6 @@ section{
     font-weight: 800;
     margin-bottom: 10px;
 }
-.jobBodies{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 20px;
-    background-color: #eff6ff;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
 .jobs{
     background-color: white;
     height: 350px;
@@ -464,14 +453,12 @@ textarea{
     .footerBtn{max-width: 200px;}
     form{min-width: 90%;}
     .div1{
-        border: 2px solid black;
         max-width: 100%;
         max-height: fit-content;
         padding: 20px;
         margin: 20px 0;
     }
     .div2{
-        border: 2px solid black;
         max-width: 100%;
         max-height: fit-content;
         padding: 20px;
@@ -480,11 +467,23 @@ textarea{
     
     .footerr{max-width: 100%;}
 }
+.jobBodies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #eff6ff;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
 .div1{
-    height: 700px;
-    width: 1050px;
+    height: fit-content;
+    width: 60%;
     overflow: hidden;
     border-radius: 10px;
+    margin: 130px 0;
 }
 .needed{
     width: 100%;
@@ -559,8 +558,8 @@ textarea{
     cursor: pointer;
 }
 .div2{
-    height: 701px;
-    width: 450px;
+    width: 30%;
+    height: fit-content;
     border-radius: 10px;
     overflow: hidden;
 }

@@ -9,6 +9,8 @@ import { toast } from 'react-toastify';
 
 const EditJobPage = ({updateJobSubmit}) => {
 
+    const {id} = useParams();
+    const navigate = useNavigate();
     const job = useLoaderData();
 
     const [title, setTitle] = useState(job.title);
@@ -16,17 +18,10 @@ const EditJobPage = ({updateJobSubmit}) => {
     const [location, setLocation] = useState(job.location);
     const [description, setDescription] = useState(job.description);
     const [salary, setSalary] = useState(job.salary);
-    const [companyName, setCompanyName] = useState(job.company.name);
-    const [companyDescription, setCompanyDescription] = useState(job.company.description);
-    const [contactEmail, setContactEmail] = useState(job.company.contactEmail);
-    const [contactPhone, setContactPhne] = useState(job.company.contactPhone);
-
-    
-
-
-    const navigate = useNavigate();
-
-    const {id} = useParams();
+    const [companyName, setCompanyName] = useState(job.companyname);
+    const [companyDescription, setCompanyDescription] = useState(job.companyDescription);
+    const [companyEmail, setCompanyEmail] = useState(job.companyEmail);
+    const [companyPhone, setCompanyPhone] = useState(job.companyPhone);
 
 
     const submitForm = (e) => {
@@ -39,12 +34,10 @@ const EditJobPage = ({updateJobSubmit}) => {
         location,
         description,
         salary,
-        company: {
-        name: companyName,
-        description: companyDescription,
-        email: contactEmail,
-        phone: contactPhone
-        }
+        companyName,
+        companyDescription,
+        companyEmail,
+        companyPhone
     };
 
     updateJobSubmit(updatedJob);
@@ -66,13 +59,13 @@ const EditJobPage = ({updateJobSubmit}) => {
             <option value="Internship">Internship</option>
         </select><br />
 
-        <label htmlFor="" className="labelCap">Job Listing Name</label><br />
+        <label htmlFor="title" className="labelCap">Job Listing Name</label><br />
         <input type="text" name='title' id='title' placeholder="eg. Beautiful Apartment in Miami" value={title} onChange={(e) => setTitle(e.target.value)}/><br />
 
-        <label htmlFor="" className="labelCap">Description</label><br />
+        <label htmlFor="description" className="labelCap">Description</label><br />
         <textarea name="description" id="description" placeholder="Add any job duties, expectations, requirements, etc" value={description} onChange={(e) => setDescription(e.target.value)}></textarea><br />
 
-        <label htmlFor="" className="labelCap">Salary</label><br />
+        <label htmlFor="salary" className="labelCap">Salary</label><br />
         <select name="salary" id="salary" value={salary} onChange={(e) => setSalary(e.target.value)}>
             <option value="Under $50k">Under $50k</option>
             <option value="$50k - $60k">$50k - $60k</option>
@@ -83,10 +76,10 @@ const EditJobPage = ({updateJobSubmit}) => {
             <option value="Over $100k">Over $100k</option>
         </select><br />
 
-        <label htmlFor="" className="labelCap">Location</label><br />
+        <label htmlFor="location" className="labelCap">Location</label><br />
         <input type="text" name='location' id='location' placeholder="Company Location" value={location} onChange={(e) => setLocation(e.target.value)}/><br />
 
-        <label htmlFor="" className="labelCap">Job Type</label><br />
+        <label htmlFor="type" className="labelCap">Job Type</label><br />
         <select name="type" id="type" value={type} onChange={(e) => setType}>
             <option value="Full-Time">Full-Time</option>
             <option value="Part-Time">Part-Time</option>
@@ -96,17 +89,17 @@ const EditJobPage = ({updateJobSubmit}) => {
 
         <p className='companyInfoo'>Company Info</p>
 
-        <label htmlFor="" className="labelCap">Company Name</label><br />
+        <label htmlFor="companyName" className="labelCap">Company Name</label><br />
         <input type="text" name='companyName' id='companyName' placeholder="Company Name" value={companyName} onChange={(e) => setCompanyName(e.target.value)}/><br />
 
-        <label htmlFor="" className='labelCap'>Company Description</label><br />
-        <textarea name="companyDescription" id="companyDescription" placeholder="What does your company do?"value={companyDescription} onChange={(e) => setCompanyDescription(e.target.value)}></textarea><br />
+        <label htmlFor="companyDescription" className='labelCap'>Company Description</label><br />
+        <textarea name="companyDescription" id="companyDescription" placeholder="What does your company do?" value={companyDescription} onChange={(e) => setCompanyDescription(e.target.value)}></textarea><br />
 
-        <label htmlFor="" className="labelCap">Contact Email</label><br />
-        <input type="text" name='contactEmail' id='contactEmail' placeholder="Email address for applicants" value={contactEmail} onChange={(e) => setContactEmail(e.target.value)}/><br />
+        <label htmlFor="companyPhone" className="labelCap">Contact Email</label><br />
+        <input type="email" name='companyEmail' id='companyEmail' placeholder="Email address for applicants" value={companyEmail} onChange={(e) => setCompanyEmail(e.target.value)}/><br />
 
-        <label htmlFor="" className="labelCap">Contact Phone</label><br />
-        <input type="text" name='contactPhone' id='contactPhone' placeholder="Optional phone for applicants" value={contactPhone} onChange={(e) => setContactPhne(e.target.value)}/><br />
+        <label htmlFor="companyPhone" className="labelCap">Contact Phone</label><br />
+        <input type="tel" name='companyPhone' id='companyPhone' placeholder="Optional phone for applicants" value={companyPhone} onChange={(e) => setCompanyPhone(e.target.value)}/><br />
 
         <button type="submit" className="formBtn">Update Job</button>
       </form>
