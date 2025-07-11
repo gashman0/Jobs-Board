@@ -433,7 +433,7 @@ textarea{
     .logoHolder{width: fit-content;}
     .menu{display: block;}
     .menuBtn{padding: 10px 15px; border: none; border-radius: 5px;cursor: pointer;}
-    .hero{height: 250px;}
+    .hero{height: 220px;}
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
