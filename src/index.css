@@ -445,7 +445,7 @@ textarea{
 }
 .jobBodies{
     display: flex;
-    
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding-bottom: 20px;
