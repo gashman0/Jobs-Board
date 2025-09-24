@@ -8,7 +8,6 @@ html{
 }
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
 }
 .navbar{
     display: flex;
@@ -69,8 +68,6 @@ body{
 .links:active{
     background-color: black;
 }
-
-
 /* Off-Canvas Menu */
 .offcanvas {
   position: fixed;
@@ -84,18 +81,15 @@ body{
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   padding: 1rem;
 }
-
 .offcanvas.open {
   left: 0;
 }
-
 .offcanvas-header {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
-
 .mobile-navLinks {
   list-style: none;
   padding: 0;
@@ -103,14 +97,12 @@ body{
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .mobile-navLinks .links {
   text-decoration: none;
   color: #333;
   padding: 0.5rem;
   display: block;
 }
-
 /* Overlay */
 .overlay {
   position: fixed;
@@ -159,32 +151,17 @@ body{
 section{
     display: flex;
     justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
     align-items: center;
     background-color: white;
-    height: 250px;
     width: 100%;
-}
-.forOption{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 25px;
-    width: 100%;
-    height: fit-content;
-}
-.forOption > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 95%;
 }
 .employers{
-    height: 160px;
-    width: 620px;
     background-color: #C5CAE9;
     border-radius: 10px;
-    padding: 20px;
-    margin: 0px;
+    padding: 15px;
+    padding-right: 50px;
     line-height: 32px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
 }
@@ -222,6 +199,15 @@ section{
     background-color: #eff6ff;
     width: 100%;
 }
+.jobBodies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    background-color: #eff6ff;
+    overflow: hidden;
+}
 .jobHead{
     display: flex;
     justify-content: center;
@@ -237,7 +223,7 @@ section{
 .jobs{
     background-color: white;
     height: 350px;
-    width: 500px;
+    width: 30%;
     border-radius: 10px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
     padding: 25px 20px;
@@ -329,8 +315,6 @@ section{
     font-weight: 500;
     cursor: pointer;
 }
-
-
 .search{
     width: 100%;
     padding: 20px 40px 0 40px;
@@ -438,12 +422,9 @@ textarea{
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
-    section{min-height: 450px;}
-    .forOption{flex-direction: column; display: flex;justify-content: center;height: 400px; overflow: hidden; align-items: center;}
-    section > .forOption > div{width: fit-content; height: 355px; display: block;height: fit-content;}
-    section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
-    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
-    .jobs{max-width: 90%;margin-bottom: 20px;}
+    section{flex-direction: column; padding: 20px;}
+    .employers{width: 100%;}
+    .jobs{max-width: 90%;margin-bottom: 20px; width: 100%;}
     .details{overflow: hidden;height: 110px;margin-top: 10px; text-align: left !important;}
     .locationHolder{max-height: 80px;}
     .footerBtn{max-width: 200px;}
@@ -463,17 +444,6 @@ textarea{
     
     .footerr{max-width: 100%;}
     .jobBodies{height: auto}
-}
-.jobBodies{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-bottom: 20px;
-    background-color: #eff6ff;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
 }
 .div1{
     height: fit-content;
