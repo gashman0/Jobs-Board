@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Job from './Job';
 import Spinner from './Spinner';
+import NoJobsFound from './NoJobsFound';
 
 // Add this reconstruction function (same as in App.jsx)
 const reconstructJob = (job) => {
@@ -16,7 +16,7 @@ const reconstructJob = (job) => {
   };
 };
 
-const JobSection = ({ isHome = false }) => {
+const JobSection = ({ isHome = false, searchQuery = "" }) => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -25,7 +25,6 @@ const JobSection = ({ isHome = false }) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      // Updated API URL for MockAPI
       const apiUrl = isHome 
         ? `${MOCKAPI_URL}?page=1&limit=3`  // MockAPI pagination format
         : MOCKAPI_URL;
@@ -35,7 +34,6 @@ const JobSection = ({ isHome = false }) => {
         if (!res.ok) throw new Error('Failed to fetch');
         
         const data = await res.json();
-        // Reconstruct jobs with nested company
         setJobs(data.map(job => reconstructJob(job)));
         
       } catch (error) {
@@ -46,7 +44,18 @@ const JobSection = ({ isHome = false }) => {
     };
 
     fetchJobs();
-  }, [isHome]); // Added isHome as dependency
+  }, [isHome]);
+
+  // Filter jobs based on search query
+  const filteredJobs = jobs.filter((job) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      job.title.toLowerCase().includes(query) ||
+      job.description.toLowerCase().includes(query) ||
+      job.type.toLowerCase().includes(query) ||
+      job.location.toLowerCase().includes(query)
+    );
+  });
 
   return (
     <div className="jobsSection">
@@ -58,10 +67,10 @@ const JobSection = ({ isHome = false }) => {
           <Spinner loading={loading} />
         ) : (
           <>
-            {jobs.length > 0 ? (
-              jobs.map((job) => <Job key={job.id} job={job} />)
+            {filteredJobs.length > 0 ? (
+              filteredJobs.map((job) => <Job key={job.id} job={job} />)
             ) : (
-              <p>No jobs found</p>  // Fallback for empty data
+              <NoJobsFound />
             )}
           </>
         )}
