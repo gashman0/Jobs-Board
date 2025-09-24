@@ -157,7 +157,10 @@ section{
     background-color: white;
     width: 100%;
 }
+
 .employers{
+    height: 160px;
+    width: 620px;
     background-color: #C5CAE9;
     border-radius: 10px;
     padding: 15px;
@@ -422,28 +425,19 @@ textarea{
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
-    section{flex-direction: column; padding: 20px;}
-    .employers{width: 100%;}
-    .jobs{max-width: 90%;margin-bottom: 20px; width: 100%;}
+    section{min-height: 450px;}
+    .forOption{flex-direction: column; display: flex;justify-content: center;height: 400px; overflow: hidden; align-items: center;}
+    section > .forOption > div{width: fit-content; height: 355px; display: block;height: fit-content;}
+    section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
+    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
+    .jobs{max-width: 90%;margin-bottom: 20px;}
     .details{overflow: hidden;height: 110px;margin-top: 10px; text-align: left !important;}
     .locationHolder{max-height: 80px;}
     .footerBtn{max-width: 200px;}
     form{min-width: 90%;}
-    .div1{
-        min-width: 100%;
-        max-height: fit-content;
-        padding: 20px;
-        margin: 20px 0 !important;
-    }
-    .div2{
-        min-width: 100%;
-        max-height: fit-content;
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    
+    .div1{min-width: 100%; max-height: fit-content; padding: 20px; margin: 20px 0 !important;}
+    .div2{ min-width: 100%; max-height: fit-content; padding: 20px; margin-bottom: 20px;}
     .footerr{max-width: 100%;}
-    .jobBodies{height: auto}
 }
 .div1{
     height: fit-content;
