@@ -97,7 +97,7 @@ const AddJob = ({addJobSubmit}) => {
         <button type="submit" className="formBtn">Add Job</button>
       </form>
 
-      <div className="footerr">I'm just a footer</div>
+      <div className="footer">I'm just a footer</div>
 
     </div>
 

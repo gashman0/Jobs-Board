@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import logo from '../assets/images/logo.png';
 import { NavLink } from 'react-router-dom';
+import logo1 from '../assets/images/third.png';
 
 
 const offcan = {color: "#3f51b5"};
@@ -19,7 +20,7 @@ const Navbar = () => {
       <div className="navbar">
         <div className="navholder">
           <div className="logoHolder">
-            <img className="logo" src={ logo } />
+            <img className="logo" src={ logo1 } />
             <p className="logoCaption">Jobs Boards</p>
           </div>
           <ul className="navLinks">

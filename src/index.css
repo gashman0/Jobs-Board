@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #3f51b5;
+    background-color: #1E3A8A;
     height: 80px;
     width: 100%;
     border-bottom: 1px solid #C5CAE9;
@@ -33,7 +33,7 @@ body{
     width: 400px;
 }
 .logo{
-    height: 40px;
+    height: 70px;
 }
 .logoCaption{
     color: white;
@@ -120,7 +120,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3F51B5;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
     height: 280px;
     width: 100%;
 }
@@ -154,14 +154,13 @@ section{
     gap: 30px;
     padding: 20px 0;
     align-items: center;
-    background-color: white;
+    background-color: #F9FAFB;
     width: 100%;
 }
 
 .employers{
-    height: 160px;
-    width: 620px;
-    background-color: #C5CAE9;
+    color: white;
+    background: linear-gradient(to right, #1E3A8A, #3B82F6);
     border-radius: 10px;
     padding: 15px;
     padding-right: 50px;
@@ -190,7 +189,7 @@ section{
 .add{
     text-align: center;
     text-decoration: none;
-    background-color: #303F9F;
+    background-color: black;
     color: white;
     border: none;
     padding: 10px;
@@ -207,7 +206,6 @@ section{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding-bottom: 20px;
     background-color: #eff6ff;
     overflow: hidden;
 }
@@ -218,14 +216,13 @@ section{
     height: 80px;
 }
 .headTitle{
-    color: #303F9F;
+    color: #1E3A8A;
     font-size: 35px;
     font-weight: 800;
     margin-bottom: 10px;
 }
 .jobs{
     background-color: white;
-    height: 350px;
     width: 30%;
     border-radius: 10px;
     box-shadow: 0 0px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
@@ -235,7 +232,6 @@ section{
 }
 .jobDetails{
     overflow: hidden;
-    height: 230px;
 }
 .jobType{
     font-size: 17px;
@@ -250,7 +246,7 @@ section{
 .details{
     font-size: 17px;
     color: rgb(30 30 30);
-    margin-top: 25px;
+    margin-top: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .showMore{
@@ -260,7 +256,7 @@ section{
     color: rgb(100 100 100);
 }
 .jobPay{
-    color: #3F51B5;
+    color: #1E3A8A;
     font-size: 18px;
     margin-top: 10px;
 }
@@ -272,7 +268,6 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
 }
 .locationDetails{
     display: flex;
@@ -289,7 +284,7 @@ section{
 .readMore{
     text-align: center;
     text-decoration: none;
-    background-color: #3F51B5;
+    background-color: black;
     color: white;
     padding: 15px;
     width: 120px;
@@ -301,7 +296,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #303F9F;
+    background-color: #1E3A8A;
     height: 140px;
     width: 100%;
 }
@@ -425,12 +420,9 @@ textarea{
     .heroContainer{height: 100px;}
     .heroContainer > div > .firstHero{font-size: 45px;}
     .heroContainer > div > .secondHero{font-size: 15px;}
-    section{min-height: 450px;}
-    .forOption{flex-direction: column; display: flex;justify-content: center;height: 400px; overflow: hidden; align-items: center;}
-    section > .forOption > div{width: fit-content; height: 355px; display: block;height: fit-content;}
-    section > .forOption > div > .employers{width: 100%;height: fit-content; margin: 0;}
-    section > .forOption > div > .last{width: 100%;height: fit-content; margin-top: 20px;}
-    .jobs{max-width: 90%;margin-bottom: 20px;}
+    section{display: block;}
+    .employers{margin: 10px;}
+    .jobs{width: 90%;}
     .details{overflow: hidden;height: 110px;margin-top: 10px; text-align: left !important;}
     .locationHolder{max-height: 80px;}
     .footerBtn{max-width: 200px;}
@@ -584,15 +576,6 @@ textarea{
     font-weight: bold;
     border-radius: 20px;
     cursor: pointer;
-}
-.footerr{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #303F9F;
-    color: white;
-    height: 140px;
-    width: 100%;
 }
 .Toastify {
     position: fixed !important;

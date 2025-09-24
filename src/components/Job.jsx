@@ -12,6 +12,8 @@ const Job = ( {job} ) => {
 
     if(!showFullDescription){
         description = description.substring(0, 100) + "...";
+    }else{
+        description = description.substring(0, 250) + "...";
     }
 
     return (
