@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import JobSection from '../components/JobSection';
+import Footer2 from '../components/Footer2';
 
 const JobsPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -20,7 +21,7 @@ const JobsPage = () => {
         <JobSection searchQuery={searchQuery} />
       </div>
 
-      <div className="footer">I'm just a footer</div>
+      <Footer2 />
     </div>
   )
 }

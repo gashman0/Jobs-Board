@@ -68,7 +68,9 @@ const JobSection = ({ isHome = false, searchQuery = "" }) => {
         ) : (
           <>
             {filteredJobs.length > 0 ? (
-              filteredJobs.map((job) => <Job key={job.id} job={job} />)
+              [...filteredJobs]   // make a copy
+                .reverse()        // reverse order
+                .map((job) => <Job key={job.id} job={job} />)
             ) : (
               <NoJobsFound />
             )}

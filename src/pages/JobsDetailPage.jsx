@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import location from '../assets/images/location.png';
 import { toast } from 'react-toastify';
+import Footer2 from '../components/Footer2';
 
 
 
@@ -92,9 +93,7 @@ const JobsDetailPage = ({deleteJob}) => {
         </div>
 
 
-        <div className="footerr">
-            I'm just a footer
-        </div>
+        <Footer2 />
     </>
     
   )

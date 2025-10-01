@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useParams, useLoaderData, Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import Footer2 from '../components/Footer2';
 
 
 
@@ -104,7 +105,7 @@ const EditJobPage = ({updateJobSubmit}) => {
         <button type="submit" className="formBtn">Update Job</button>
       </form>
 
-      <div className="footerr">I'm just a footer</div>
+      <Footer2 />
 
     </div>
   )
